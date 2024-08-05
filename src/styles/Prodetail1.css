@@ -1,0 +1,271 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .product-info {
+    display: flex;
+    gap: 30px;
+    margin: 50px 0;
+  }
+  
+  .pro-details-imgs {
+      width: 49%;
+    display: flex;
+   flex-direction: column;
+   gap: 20px;
+  }
+  .product-image{
+      width: 100%;
+  height: 78vh;
+  background:rgba(165, 169, 172, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .product-image img {
+    width: 345.804px;
+    height: 420px;
+  }
+  
+  .pro-img-cards {
+      width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .product-image-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    background: rgba(165, 169, 172, 0.05);
+  }
+  
+  .product-image-card img {
+    width: 80px;
+    height: 96px;
+  }
+  .product-details{
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .pro-det-top{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .pro-det-top p{
+      color: #101316;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 42px; 
+  }
+  .pro-det-top button{
+      display: inline-flex;
+  height: 30px;
+  padding: 6px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: rgba(60, 209, 57, 0.10);
+  border: none;
+  color: #3CD139;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  }
+  .starrev{
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  }
+  .starrev span{
+      color: #A5A9AC;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px; 
+  }
+  .detailprice{
+      margin-top: 12px;
+      color:  #A5A9AC;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px; 
+  }
+  .detaildesc {
+    width: 100%;
+    color: #101316;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .detailcolor{
+      margin-top: 20px;
+      color: #101316;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px; 
+  }
+  .addpro{
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .plusminus{
+      width: 120px;
+      display: flex;
+      align-items: center;
+  }
+  .plusminus div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      cursor: pointer;
+  }
+  .plusminus div:nth-of-type(1){
+      width: 40px;
+  height: 56px;
+  border-radius: 10px 0px 0px 10px;
+  border: 1px solid rgba(165, 169, 172, 0.20);
+  }
+  .plusminus div:nth-of-type(2){
+      width: 40px;
+  height: 56px;
+  border-top: 1px solid  rgba(165, 169, 172, 0.20);
+  border-bottom: 1px solid rgba(165, 169, 172, 0.20);
+  }
+  .plusminus div:nth-of-type(3){
+      width: 40px;
+  height: 56px;
+  border-radius: 0px 10px 10px 0px;
+  border: 1px solid rgba(165, 169, 172, 0.20);
+  }
+  .addprobtn{
+      display: flex;
+  width: 339px;
+  height: 56px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #1C4E8E;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px; 
+  border: none;
+  }
+  .detailheart{
+      display: flex;
+  width: 56px;
+  height: 56px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: rgba(165, 169, 172, 0.05);
+  cursor: pointer;
+  }
+  .share{
+      margin-top: 30px;
+  }
+  .share p{
+      color: #101316;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px; 
+  }
+  .sharesocial{
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  .sharesocial div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(165, 169, 172, 0.20);
+  }
+  .selectf {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    
+    .red, .black, .blue, .yellow, .green, .orange {
+      width: 36px;
+  height: 36px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .red {
+      background: #E15353;
+    }
+    
+    .black {
+      background-color: #101316;
+    }
+    
+    .blue {
+      background-color: #5553E1;
+    }
+    
+    .yellow {
+      background-color: #E1D353;
+    }
+    
+    .green {
+      background-color: #A3D139;
+    }
+    
+    .orange {
+      background-color: #E1A053;
+    }
+    
+    .optionfcard {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    
+    .color-checkbox2 {
+      display: none;
+    }
+    
+    .color-box2 {
+      width: 36px;
+  height: 36px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    
+    input[type="checkbox"]:checked + label .color-box2 {
+      border: 2px solid #000;
+    }

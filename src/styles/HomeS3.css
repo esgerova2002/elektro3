@@ -1,0 +1,98 @@
+
+.home-s3{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.home-s3-basliq{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.s3-basliq-2 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.p-home-s3-basliq{
+    color:#101316;
+font-size: 30px;
+font-weight: 700;
+line-height: 42px;
+}
+.s3-basliq-2 ul li button{
+background-color: transparent;
+    padding: 10px;
+    color: #101316;
+font-size: 20px;
+font-weight: 400;
+line-height: 30px; 
+border:none;
+}
+.s3-basliq-2 ul li button:hover{
+    color: #1C4E8E;
+   border-bottom: 1px solid #1C4E8E;
+}
+.home-s3-products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.home-s3-onePro{
+    padding: 30px 0 0 30px;
+    width: 360px;
+height: 714px;
+background-color: #ffffff;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-between;
+}
+.home-s3-onePro p{
+    width: 280px;
+    color:#101316;
+font-size: 30px;
+font-weight: 700;
+line-height: 42px; 
+}
+.home-s3-onePro span{
+    width: 310px;
+    color: #101316;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 42px;
+}
+.home-s3-pro-card{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.home-s3-pro-card-img{
+    width: 200.929px;
+height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-s3-pro{
+    display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.home-s3-pro-card p{
+    color: #101316;
+font-size: 16px;
+font-weight: 700;
+line-height: 30px; 
+}
+.home-s3-pro-card span{
+    color:#101316;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+
+}

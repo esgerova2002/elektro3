@@ -1,0 +1,78 @@
+
+.procatdir {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+.pdown {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.catitle {
+  color: #101316;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.selectF {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.optionFcard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.optionFcard label {
+  display: flex;
+  align-items: center;
+
+}
+
+.color-checkbox {
+  display: none;
+}
+
+.color-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+
+.red { background: #E15353; }
+.black { background-color: #101316; }
+.blue { background-color: #5553E1; }
+.yellow { background-color: #E1D353; }
+.green { background-color: #A3D139; }
+.orange { background-color: #E1A053; }
+
+.color-checkbox.red:checked + label .color-box { border: 2px solid #000; }
+.color-checkbox.black:checked + label .color-box { border: 2px solid #000; }
+.color-checkbox.blue:checked + label .color-box { border: 2px solid #000; }
+.color-checkbox.yellow:checked + label .color-box { border: 2px solid #000; }
+.color-checkbox.green:checked + label .color-box { border: 2px solid #000; }
+.color-checkbox.orange:checked + label .color-box { border: 2px solid #000; }
+

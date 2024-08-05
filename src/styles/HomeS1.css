@@ -1,0 +1,78 @@
+
+.Shop-by-Categories {
+  text-align: center;
+}
+
+.S-basliqDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.S-basliq {
+  color: #101316;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.s1Btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.s1-right, .s1-left {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: rgba(165, 169, 172, 0.10);
+  cursor: pointer;
+  border: none;
+}
+
+.s1-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.s1-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.s1-card-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(165, 169, 172, 0.10);
+}
+
+.s1-card-circle img {
+  border-radius: 50%;
+  width: 115px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.s1-ename {
+  color: #101316;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+}
+

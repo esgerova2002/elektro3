@@ -1,0 +1,225 @@
+
+.closeLogin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.login-container {
+  position: relative;
+  top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  width: 420px;
+  box-shadow: 0px 10px 40px -4px rgba(16, 24, 40, 0.02),
+              0px 8px 8px -4px rgba(16, 24, 40, 0.02);
+}
+
+.close {
+  position: absolute;
+  right: 550px;
+  top: 10px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.welcome {
+  color: #101316;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.here {
+  color: #a5a9ac;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.Form-Group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Form-Group label {
+  color: #101316;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.Form-Group input {
+  width: 100%;
+  height: 56px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  border: 1px solid #1c4e8e;
+  color: #101316;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.checkforgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+}
+
+.check input {
+  margin-right: 5px;
+}
+
+.check label {
+  color: #101316;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.checkforgot p {
+  color: #101316;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+button.login {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #1c4e8e;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button.register {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #1c4e8e;
+  color: #1c4e8e;
+  font-weight: 400;
+  font-size: 16px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.hrp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hrp p {
+  color: #101316;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.hr3 {
+  width: 132px;
+  height: 1px;
+  background: rgba(165, 169, 172, 0.2);
+}
+
+.brauz {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(165, 169, 172, 0.2);
+  cursor: pointer;
+}
+
+.brauz .brauzlogo {
+  width: 24px;
+  height: 24px;
+}
+
+.brauz span {
+  color: #101316;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #c2e0f3;
+  color: #1c4e8e;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .Form-Group input {
+    padding: 8px;
+  }
+  button.login,
+  button.register {
+    padding: 8px;
+    height: 40px;
+  }
+
+  .brauz {
+    padding: 8px;
+  }
+  .close {
+    position: absolute;
+    right: 10px;}
+    .login ,form{
+      gap: 10px;
+    }
+}
+
