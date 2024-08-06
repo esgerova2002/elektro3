@@ -1,0 +1,140 @@
+.minicart{
+    width: 330px;
+    display: inline-flex;
+    height: 99vh;
+    padding: 20px;
+    flex-direction: column;
+    background: #FFF;
+    box-shadow: 0px 10px 40px -4px rgba(16, 24, 40, 0.02), 0px 8px 8px -4px rgba(16, 24, 40, 0.02);
+    position: absolute;
+    top:0;
+    right: 0;
+    overflow: hidden;
+    z-index: 999;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 19, 22, 0.10);
+    z-index: 998; 
+    display: none;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+  
+.minicartbasliq{
+    color: #101316;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+margin-bottom: 30px;
+}
+.minicartbasliq .addprodatacount{
+    color: #101316;
+font-size: 16px;
+font-weight: 700;
+line-height: 30px;
+}
+.minicartProdata{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.miniimg{
+    width: 41.167px;
+height: 50px;
+}
+.miniProdatatitle{
+    color: #101316;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+}
+.miniprodtaPrice{
+    color:  #101316;
+font-size: 14px;
+font-weight: 700;
+line-height: 24px; 
+}
+.miniprodatacount{
+    color: #101316;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+}
+.miniProdata{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+.minitrash{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+.minitrash img{
+    width: 20px;
+height: 20px;
+}
+.minicartbottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    position: absolute;
+    bottom:0;
+}
+.minicartbottomp2{
+    width: 90%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.minicartbottomp2 p{
+    color:#101316;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px;
+}
+.minivc{
+    display: flex;
+width: 90%;
+height: 56px;
+padding: 20px;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+background: rgba(165, 169, 172, 0.10);
+cursor: pointer;
+border:none;
+color: #101316;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+}
+.minicheck{
+    display: flex;
+width: 90%;
+height: 56px;
+padding: 20px;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+background: #1C4E8E;
+cursor: pointer;
+border:none;
+color:  #FFF;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+}

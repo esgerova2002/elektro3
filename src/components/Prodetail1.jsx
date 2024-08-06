@@ -27,7 +27,15 @@ export default function Prodetail1() {
     setQuantity(prevQuantity => Math.max(1, prevQuantity + amount));
   };
   const handleAddToCart = () => {
-    addToCart(quantity);
+    const item = {
+      id: product.id,
+      name: product.name,
+      imgSrc: product.imgSrc,
+      price: product.price,
+      quantity: quantity,
+      color: selectedColor
+    };
+    addToCart(item);
   };
 
   if (!product) {

@@ -1,24 +1,26 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaRegHeart } from 'react-icons/fa';
 import { SlArrowDown } from 'react-icons/sl';
 import { BsCart2 } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { useCart } from './CartContext'; // Import the context
+import Minicart from './Minicart'; // Import the Minicart component
 import "../styles/Header.css";
 
 const Header = ({ onLoginClick }) => {
   const { cartItems } = useCart(); // Get cartItems from the context
+  const [isMinicartOpen, setIsMinicartOpen] = useState(false); // State to manage Minicart visibility
 
+  const handleCartClick = () => {
+    setIsMinicartOpen(!isMinicartOpen);
+  };
 
   return (
     <header className="container">
       <div className="headerTop">
         <div className="logo">
-
           <img src="/images/Group 427319094.png" alt="Logo" />
-
         </div>
         <div className="allSearch">
           <div className="select-wrapper">
@@ -42,12 +44,10 @@ const Header = ({ onLoginClick }) => {
         </div>
         <div className="headtopright">
           <FaRegHeart className="topicon" />
-          <div className="cart-icon-wrapper">
+          <div className="cart-icon-wrapper" onClick={handleCartClick}>
             <BsCart2 className="topicon" />
             <div className="cart-count">
-
-              <span>{cartItems}</span>
-
+              <span>{cartItems.length}</span>
             </div>
           </div>
           <button onClick={onLoginClick}>Login</button>
@@ -83,9 +83,18 @@ const Header = ({ onLoginClick }) => {
           </ul>
         </nav>
       </div>
+      {isMinicartOpen && (
+        <>
+          <div className="overlay active" onClick={handleCartClick}></div>
+          <Minicart />
+        </>
+      )}
     </header>
   );
 };
 
 export default Header;
+
+
+
 
