@@ -127,6 +127,23 @@ export default function Prodetail2() {
 
                     </div>
                 </div>
+                <div className='formrevadd'>
+                  <form action="" className='revform'>
+                    <div className='revformid'>
+                    <label htmlFor="name">Name</label>
+                    <input type='text' placeholder='Enter Your Name' name='name'></input>
+                    </div>
+                    <div className='revformid'>
+                    <label htmlFor="email">Email Address</label>
+                    <input type='email' placeholder='Email Address' name='email'></input>
+                    </div>
+                    <div className='revformid'>
+                    <label htmlFor="rev">Your Review</label>
+                    <textarea placeholder='Enter Your Review' name="rev"></textarea>
+                    </div>
+                    <button type='submit' className='revformbtn'>Submit</button>
+                  </form>
+                </div>
               </div>
             </div>
           )}

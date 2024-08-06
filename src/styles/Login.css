@@ -57,7 +57,7 @@
   font-size: 16px;
 }
 
-form {
+.logform {
   display: flex;
   flex-direction: column;
   gap: 16px;

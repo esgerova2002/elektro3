@@ -18,7 +18,7 @@ export default function Login({ onClose, handleRegisterClick }) {
         <div className="login">
           <h3 className="welcome">Welcome 👋</h3>
           <p className="here">Please login here</p>
-          <form>
+          <form className="logform">
             <div className="Form-Group">
               <label htmlFor="email">Email Address</label>
               <input type="email" id="email" />
