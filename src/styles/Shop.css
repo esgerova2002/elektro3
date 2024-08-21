@@ -128,7 +128,7 @@ border: none;
 .pagIcon{
   cursor: pointer;
 }
-@media (max-width:1000px) {
+@media (max-width:900px) {
   .product-list{
     display: flex;
     flex-wrap: wrap;

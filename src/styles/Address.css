@@ -1,0 +1,255 @@
+.addresstitle{
+    color:#101316;
+font-size: 40px;
+font-weight: 700;
+line-height: 56px;
+}
+.addleftleftright{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+.addleftpag{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.addleftpag div:nth-of-type(1),.addleftpag div:nth-of-type(3) , .addleftpag div:nth-of-type(5){
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.addleftpag div:nth-of-type(1){
+    background:#1C4E8E;
+    margin-left: 15px;
+}
+.addleftpag div:nth-of-type(3) , .addleftpag div:nth-of-type(5){
+background: rgba(165, 169, 172, 0.10);
+margin-right: 10px;
+}
+.addleftpag div:nth-of-type(5){
+    margin-right: 10px;
+    }
+.addleftpag div:nth-of-type(2),.addleftpag div:nth-of-type(4){
+    width: 290px;
+    height: 1px;
+    border: 1px dashed rgba(165, 169, 172, 0.20);
+}
+.addleftpagbot{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.addleftpagbot p{
+    color:#101316;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+}
+.addtext{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.addtext p:nth-of-type(1){
+    color: #101316;
+font-size: 20px;
+font-weight: 700;
+line-height: 30px;
+}
+.addtext p:nth-of-type(2){
+    color: #101316;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px; 
+}
+.adrcards{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.adrcard{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+background:rgba(165, 169, 172, 0.05);
+padding: 16px;
+}
+.adrcardtitleinputcheck{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.adrcardtitleinputcheck p{
+    color: #101316;
+font-size: 20px;
+font-weight: 700;
+line-height: 30px; 
+}
+.adrcardtitleinputcheck input{
+    width: 24px;
+height: 24px;
+outline: none;
+}
+.adrcard p{
+    width: 295px;
+    margin-top: 9px;
+    color:#101316;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+}
+.adddeledbtn{
+    width: 100%;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.adddeledbtn button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 48%;
+    height: 34px;
+padding: 10px;
+border-radius: 8px;
+border: none;
+}
+.adddeledbtn button:nth-of-type(1){
+    background:  rgba(165, 169, 172, 0.10);
+}
+.adddeledbtn button:nth-of-type(1){
+    background:  rgba(255, 114, 98, 0.10);
+}
+.deliverHere{
+    margin-top: 30px;
+    display: flex;
+width: 320px;
+height: 56px;
+padding: 20px;
+justify-content: center;
+align-items: center;
+border: none;
+border-radius: 10px;
+background: #1C4E8E;
+color: #FFF;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+}
+.newAddress{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(165, 169, 172, 0.20);
+}
+.newAddress p{
+    color:#101316;
+font-size: 20px;
+font-weight: 700;
+line-height: 30px;
+}
+.adrform{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.adrform div{
+    position: relative;
+}
+.adrselicon{
+    position: absolute;
+    top:35px;
+    right: 20px;
+}
+.adrform div:nth-of-type(1),.adrform div:nth-of-type(2),.adrform div:nth-of-type(3),
+.adrform div:nth-of-type(4),.adrform div:nth-of-type(5),.adrform div:nth-of-type(6),
+.adrform div:nth-of-type(7){
+display: flex;
+flex-direction:column ;
+}
+.adrform div:nth-of-type(8){
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.adrform button{
+    display: flex;
+width: 320px;
+height: 56px;
+padding: 20px;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+background: #1C4E8E;
+border-radius: 10px;
+background: #1C4E8E;
+border: none;
+color: #FFF;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+}
+.adrform div label{
+    color: #101316;
+font-size: 12px;
+font-weight: 400;
+line-height: 20px; 
+}
+.adrform div input::placeholder{
+    color: rgba(165, 169, 172, 0.80);
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+}
+.adrform div:nth-of-type(1) input,.adrform div:nth-of-type(2) input,.adrform div:nth-of-type(3) input,
+.adrform div:nth-of-type(4) input,.adrform div:nth-of-type(5) input,.adrform div:nth-of-type(6) input,
+.adrform div:nth-of-type(7) input{
+    display: flex;
+width: 730px;
+height: 50px;
+padding: 13px 20px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+border-radius: 10px;
+border: 1px solid rgba(165, 169, 172, 0.20);
+outline: none;
+}
+.adrform div select{
+    display: flex;
+width: 730px;
+height: 50px;
+padding: 13px 20px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 10px;
+border-radius: 10px;
+border: 1px solid rgba(165, 169, 172, 0.20);
+appearance: none;
+outline: none;
+color: rgba(165, 169, 172, 0.80);
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+}
+

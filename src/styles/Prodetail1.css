@@ -269,3 +269,10 @@
     input[type="checkbox"]:checked + label .color-box2 {
       border: 2px solid #000;
     }
+    @media (max-width: 768px) {
+      .product-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+      }
+  }

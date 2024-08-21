@@ -1,0 +1,92 @@
+.checkout{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+.checgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:50px;
+}
+.checbasliq p{
+    color: #101316;
+font-size: 40px;
+font-weight: 700;
+line-height: 56px; 
+}
+.checppqstable{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ppqs{
+    padding-bottom: 13px;
+    display: grid;
+    grid-template-columns: 10fr 3fr 6fr 3fr 1fr;
+    border-bottom: 1px solid rgba(165, 169, 172, 0.20) ;
+}
+.checimgtitle{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checimgtitle img{
+    width: 41.167px;
+height: 50px;
+}
+.chectitlecolor{
+    display: flex;
+    flex-direction: column;
+}
+.chectitlecolor p:nth-of-type(1){
+    color:#101316;
+font-size: 16px;
+font-weight: 700;
+line-height: 30px;
+}
+.chectitlecolor p:nth-of-type(2){
+    color: #101316;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.ppqstit{
+    color:#101316;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; /* 187.5% */
+}
+.checplusminus{
+    display: flex;
+}
+.checminus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+height: 50px;
+border-radius: 10px 0px 0px 10px;
+border: 1px solid rgba(165, 169, 172, 0.20);
+cursor: pointer;
+}
+.checkbir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+height: 50px;
+border-top: 1px solid rgba(165, 169, 172, 0.20);
+border-bottom: 1px solid rgba(165, 169, 172, 0.20);
+}
+.checkplus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+height: 50px;
+border-radius: 0px 10px 10px 0px;
+border: 1px solid rgba(165, 169, 172, 0.20);
+cursor: pointer;
+}

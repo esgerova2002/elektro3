@@ -1,0 +1,95 @@
+ 
+   .rewleftpag{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .rewleftpag div:nth-of-type(1),.rewleftpag div:nth-of-type(3) , .rewleftpag div:nth-of-type(5){
+        display: flex;
+        width: 40px;
+        height: 40px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background-color: #1C4E8E;
+    }
+    .rewleftpag div:nth-of-type(1){
+        margin-left: 15px;
+    }
+    .rewleftpag div:nth-of-type(5){
+    margin-right: 10px;
+    }
+    .rewleftpag div:nth-of-type(2),.rewleftpag div:nth-of-type(4){
+        width: 290px;
+        height: 1px;
+        border: 1px dashed rgba(165, 169, 172, 0.20);
+    }
+    .revcards{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .revcard{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 10px;
+        border-bottom:1px solid rgba(165, 169, 172, 0.20);
+    }
+    .revcard img{
+        width: 45.284px;
+        height: 55px;
+    }
+    .revtitlepricecount{
+        display: flex;
+        flex-direction: column;
+    }
+    .revtitlepricecount p:nth-of-type(1){
+        color: #101316;
+font-size: 16px;
+font-weight: 700;
+line-height: 30px;
+    }
+    .revtitlepricecount p:nth-of-type(2),.revtitlepricecount p:nth-of-type(3){
+        color: #101316;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+    }
+    .revaddmet{
+        display: flex;
+        flex-direction: column;
+    }
+    .revaddmetcard{
+        margin-top: 30px;
+    }
+    .revaddmetcard p:nth-of-type(1){
+        color: #101316;
+font-size: 20px;
+font-weight: 700;
+line-height: 30px; 
+    }
+    .revaddmetcardflex{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(165, 169, 172, 0.20);
+    }
+    .revaddmetcardflex div p:nth-of-type(1){
+        color: #101316;
+font-size: 18px;
+font-weight: 700;
+line-height: 30px; 
+    }
+    .revaddmetcardflex div p:nth-of-type(2){
+        color:#101316;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+    }

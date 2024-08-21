@@ -14,6 +14,10 @@ import "./App.css";
 import Register from "./components/Register";
 import { CartProvider } from './components/CartContext';
 import Minicart from "./components/Minicart";
+import Checkout from "./components/Checkout";
+import Address from './components/Address';
+import PaymentMethod from "./components/PaymentMethod";
+import Review from './components/Review';
 
 function App() {
   const [modalType, setModalType] = useState("");
@@ -48,7 +52,7 @@ function App() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (minicartRef.current && !minicartRef.current.contains(event.target)) {
-        setIsMinicartOpen(false);
+        setIsMinicartOpen(false); // Dışarıya tıklayınca minicart'ı kapat
       }
     };
 
@@ -59,7 +63,7 @@ function App() {
   }, []);
 
   return (
-    <CartProvider> {/* Wrap the app with CartProvider */}
+    <CartProvider> {/* CartContext ile App'i sarmala */}
       <Router>
         <Header onLoginClick={handleLoginClick} onCartClick={toggleMinicart} />
         <Routes>
@@ -69,6 +73,10 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/product/:productId" element={<ProductDetail />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/address" element={<Address />} />
+          <Route path="/payment-method" element={<PaymentMethod />} />
+          <Route path="/review" element={<Review />} />
         </Routes>
         <Footer />
         {modalType === "login" && (
@@ -85,7 +93,7 @@ function App() {
         )}
         {modalType === "success" && <Success onClose={handleCloseSuccess} />}
         {isMinicartOpen && (
-          <div ref={minicartRef}>
+          <div ref={minicartRef} className="minicart-container">
             <Minicart />
           </div>
         )}
@@ -95,4 +103,5 @@ function App() {
 }
 
 export default App;
+
 

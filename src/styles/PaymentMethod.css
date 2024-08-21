@@ -1,0 +1,145 @@
+.addleftpag2 div:nth-of-type(3){
+background: #1C4E8E;
+}
+.addleftpag2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.addleftpag2 div:nth-of-type(1),.addleftpag2 div:nth-of-type(3) , .addleftpag2 div:nth-of-type(5){
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.addleftpag2 div:nth-of-type(1),.addleftpag2 div:nth-of-type(3){
+    background:#1C4E8E;
+}
+.addleftpag2 div:nth-of-type(1){
+    margin-left: 15px;
+}
+.addleftpag2 div:nth-of-type(5){
+background: rgba(165, 169, 172, 0.10);
+margin-right: 10px;
+}
+.addleftpag2 div:nth-of-type(2),.addleftpag2 div:nth-of-type(4){
+    width: 290px;
+    height: 1px;
+    border: 1px dashed rgba(165, 169, 172, 0.20);
+}
+.payform{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.payradiotop{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.payradiotop label, .payradiolabelbattom label{
+    color:#101316;
+font-size: 20px;
+font-weight: 700;
+line-height: 30px; 
+}
+.paynamenumber label,.paydtacvv div label{
+    color: #101316;
+font-size: 12px;
+font-weight: 400;
+line-height: 20px;
+}
+.payradiotop input, .payradiolabelbattom input{
+    width: 24px;
+height: 24px;
+}
+.paynamenumber{
+    display: flex;
+    flex-direction: column;
+}
+.paynamenumber input{
+    display: flex;
+width: 100%;
+height: 50px;
+padding: 13px 20px;
+justify-content: center;
+align-items: flex-start;
+border-radius: 10px;
+border: 1px solid rgba(165, 169, 172, 0.20);
+outline: none;
+}
+.payform input::placeholder{
+    color: #101316;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+}
+.paydtacvv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.paydtacvv div{
+    display: flex;
+    flex-direction: column;
+}
+.paydtacvv div input{
+    display: flex;
+width: 340px;
+height: 50px;
+padding: 13px 20px;
+justify-content: center;
+align-items: flex-start;
+border-radius: 10px;
+border: 1px solid rgba(165, 169, 172, 0.20);
+outline: none;
+}
+.payform button{
+    display: flex;
+width: 320px;
+height: 56px;
+padding: 20px;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+background: #1C4E8E;
+border: none;
+color:#FFF;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px; 
+margin-top: 10px;
+margin-bottom: 30px;
+}
+.payradiolabelbattom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-top:1px solid rgba(165, 169, 172, 0.20);
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.paycont{
+    margin-top: 30px;
+    display: flex;
+width: 320px;
+height: 56px;
+padding: 20px;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+background: #1C4E8E;
+border: none;
+color: #FFF;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+}
