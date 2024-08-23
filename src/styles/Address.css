@@ -168,6 +168,7 @@ font-weight: 700;
 line-height: 30px;
 }
 .adrform{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -224,7 +225,7 @@ line-height: 30px;
 .adrform div:nth-of-type(4) input,.adrform div:nth-of-type(5) input,.adrform div:nth-of-type(6) input,
 .adrform div:nth-of-type(7) input{
     display: flex;
-width: 730px;
+width: 100%;
 height: 50px;
 padding: 13px 20px;
 flex-direction: column;
@@ -236,7 +237,7 @@ outline: none;
 }
 .adrform div select{
     display: flex;
-width: 730px;
+width: 100%;
 height: 50px;
 padding: 13px 20px;
 flex-direction: column;
@@ -253,3 +254,24 @@ font-weight: 400;
 line-height: 30px; 
 }
 
+@media (max-width: 900px) {
+   .addleftleftright{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+   }
+   .adrcards{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 100px;
+   }
+  }
+  @media (max-width: 400px) {
+    .adrform button, .deliverHere{
+        width: 300px;
+    }
+
+   }
+  
+  

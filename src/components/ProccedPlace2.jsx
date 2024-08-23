@@ -1,7 +1,20 @@
 import React from 'react';
-import "../styles/ProccedPlace.css"
-import "../styles/ProccedPlace2.css"
-export default function ProccedPlace2({ subtotal = 0, deliveryCharge = 0, grandTotal = 0 }) {
+import { useCart } from './CartContext';
+import "../styles/ProccedPlace.css";
+import "../styles/ProccedPlace2.css";
+
+// eslint-disable-next-line no-unused-vars
+import { useContext } from 'react';
+
+export default function ProccedPlace2() {
+  const { cartItems } = useCart();
+
+  const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    // Teslimat ücreti (sabit 1 dolar)
+    const deliveryCharge = 1.00;
+
+    // Genel toplam (subtotal + deliveryCharge)
+    const grandTotal = subtotal + deliveryCharge;
 
   return (
     <div className='checkcard2'>
@@ -12,8 +25,8 @@ export default function ProccedPlace2({ subtotal = 0, deliveryCharge = 0, grandT
       <div className='discode'>
         <p className='discodetitle'>Enter Discount Code</p>
         <div className='discodeflatapply'>
-            <div className='discodeflat'>FLAT50</div>
-            <button>Apply</button>
+          <div className='discodeflat'>FLAT50</div>
+          <button>Apply</button>
         </div>
       </div>
       <div className='checkdelivery'>
@@ -25,5 +38,5 @@ export default function ProccedPlace2({ subtotal = 0, deliveryCharge = 0, grandT
         <p>${grandTotal.toFixed(2)}</p>
       </div>
     </div>
-  )
+  );
 }

@@ -269,10 +269,121 @@
     input[type="checkbox"]:checked + label .color-box2 {
       border: 2px solid #000;
     }
-    @media (max-width: 768px) {
-      .product-info{
+    @media only screen and (max-width: 1200px) {
+      .product-info {
+        gap: 20px;
+      }
+    
+      .product-image img {
+        width: 300px;
+        height: 360px;
+      }
+    
+      .product-image-card img {
+        width: 70px;
+        height: 84px;
+      }
+    
+      .addprobtn {
+        width: 300px;
+      }
+    }
+    
+    @media only screen and (max-width: 992px) {
+      .product-info {
+        flex-direction: column;
+      }
+    
+      .product-details {
+        width: 100%;
+      }
+    
+      .product-image,
+      .product-image-card {
+        width: 100%;
+      }
+    
+      .product-image img {
+        width: 260px;
+        height: 312px;
+      }
+    
+      .product-image-card img {
+        width: 60px;
+        height: 72px;
+      }
+    
+      .addprobtn {
+        width: 260px;
+      }
+    }
+    
+    @media only screen and (max-width: 768px) {
+      .product-info {
+        gap: 15px;
+      }
+    
+      .product-image img {
+        width: 220px;
+        height: 264px;
+      }
+    
+      .product-image-card img {
+        width: 50px;
+        height: 60px;
+      }
+    
+      .addprobtn {
+        width: 220px;
+      }
+    }
+    
+    @media only screen and (max-width: 576px) {
+      .product-info {
+        gap: 10px;
+      }
+    
+      .product-image img {
+        width: 180px;
+        height: 216px;
+      }
+    
+      .product-image-card img {
+        width: 40px;
+        height: 48px;
+      }
+    
+      .addprobtn {
+        width: 180px;
+      }
+    }
+    
+    @media only screen and (max-width: 400px) {
+      .product-info {
         display: flex;
         flex-direction: column;
-        gap: 10%;
+        align-items: center;
       }
-  }
+    
+      .product-image img {
+        width: 200px;
+        height: 300px;
+      }
+      .product-image-card img {
+        width: 45px;
+        height: 70px;
+      }
+    
+      .addprobtn {
+        width: 140px;
+      }
+    
+      .pro-det-top p {
+        font-size: 24px;
+      }
+    
+      .detaildesc {
+        font-size: 14px;
+      }
+    }
+    

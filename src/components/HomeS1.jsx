@@ -3,20 +3,20 @@ import React, { useState } from 'react';
 import '../styles/HomeS1.css';
 
 const cardData = [
-  { id: 1, imgSrc: './images/image 9.png', name: 'Mobile Phones' },
-  { id: 2, imgSrc: './images/image 11.png', name: 'Smart TV' },
-  { id: 3, imgSrc: './images/image 13.png', name: 'Smart Watch' },
-  { id: 4, imgSrc: './images/image 10.png', name: 'Laptops' },
-  { id: 5, imgSrc: './images/image 14.png', name: 'Drones' },
-  { id: 6, imgSrc: './images/image 12.png', name: 'Headphones' },
-  { id: 7, imgSrc: './images/image 9.png', name: 'Mobile Phones' },
-  { id: 8, imgSrc: './images/image 11.png', name: 'Smart TV' },
-  { id: 9, imgSrc: './images/image 13.png', name: 'Smart Watch' },
-  { id: 10, imgSrc: './images/image 9.png', name: 'Mobile Phones' },
-  { id: 11, imgSrc: './images/image 11.png', name: 'Smart TV' },
-  { id: 12, imgSrc: './images/image 13.png', name: 'Smart Watch' },
-  { id: 13, imgSrc: './images/image 10.png', name: 'Laptops' },
-  { id: 14, imgSrc: './images/image 14.png', name: 'Drones' },
+  { id: 1, imgSrc: '/images/image 9.png', name: 'Mobile Phones' },
+  { id: 2, imgSrc: '/images/image 11.png', name: 'Smart TV' },
+  { id: 3, imgSrc: '/images/image 13.png', name: 'Smart Watch' },
+  { id: 4, imgSrc: '/images/image 10.png', name: 'Laptops' },
+  { id: 5, imgSrc: '/images/image 14.png', name: 'Drones' },
+  { id: 6, imgSrc: '/images/image 12.png', name: 'Headphones' },
+  { id: 7, imgSrc: '/images/image 9.png', name: 'Mobile Phones' },
+  { id: 8, imgSrc: '/images/image 11.png', name: 'Smart TV' },
+  { id: 9, imgSrc: '/images/image 13.png', name: 'Smart Watch' },
+  { id: 10, imgSrc: '/images/image 9.png', name: 'Mobile Phones' },
+  { id: 11, imgSrc: '/images/image 11.png', name: 'Smart TV' },
+  { id: 12, imgSrc: '/images/image 13.png', name: 'Smart Watch' },
+  { id: 13, imgSrc: '/images/image 10.png', name: 'Laptops' },
+  { id: 14, imgSrc: '/images/image 14.png', name: 'Drones' },
 ];
 
 const itemsPerPage = 6;

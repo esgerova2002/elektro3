@@ -183,3 +183,73 @@ font-size: 16px;
 font-weight: 400;
 line-height: 30px; 
 }
+@media (max-width: 768px) {
+  .descaddrev ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .descaddrev ul li button {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .add table {
+    width: 100%;
+  }
+
+  .revprofil {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .revproimg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .revcomment, .revdesc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .refvformstar {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .refvformstar div {
+    border-left: none;
+  }
+
+  .formrevadd .revform input, .formrevadd .revform textarea {
+    width: 100%;
+  }
+
+  .revformbtn {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .descaddrev ul li button {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .revproimg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .revcomment, .revdesc {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .revformbtn {
+    height: 48px;
+  }
+}

@@ -1,5 +1,6 @@
-import React from 'react'
-import "../styles/Prodetail3.css"
+import React from 'react';
+import "../styles/Prodetail3.css";
+
 export default function Prodetail3() {
   const currentProducts = [
     {
@@ -32,25 +33,25 @@ export default function Prodetail3() {
     <div className='container'>
       <div className='relPro'>
         <p className='relProtitle'>Related Products</p>
-      <div className="product-list">
-            {currentProducts.map(product => (
-                <div className="product-item">
-                  <img className='pro-item-img' src={product.imgSrc} alt={product.name} />
-                  <div className='proItemBottom'>
-                    <p>{product.name}</p>
-                    <div className='s3-card-star'>
-                      <img src="/images/star.png" alt="star" />
-                      <img src="/images/star.png" alt="star" />
-                      <img src="/images/star.png" alt="star" />
-                      <img src="/images/star.png" alt="star" />
-                      <img src="/images/star.png" alt="star" />
-                    </div>
-                    <p>${product.price.toFixed(2)}</p>
-                  </div>
+        <div className="product-list">
+          {currentProducts.map(product => (
+            <div key={product.id} className="product-item">
+              <img className='pro-item-img' src={product.imgSrc} alt={product.name} />
+              <div className='proItemBottom'>
+                <p>{product.name}</p>
+                <div className='s3-card-star'>
+                  <img src="/images/star.png" alt="star" />
+                  <img src="/images/star.png" alt="star" />
+                  <img src="/images/star.png" alt="star" />
+                  <img src="/images/star.png" alt="star" />
+                  <img src="/images/star.png" alt="star" />
                 </div>
-            ))}
-          </div>
+                <p>${product.price.toFixed(2)}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-  )
+    </div>
+  );
 }

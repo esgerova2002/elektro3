@@ -1,8 +1,8 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import '../styles/Filter.css';
 import { SlArrowDown } from "react-icons/sl";
 
-function Filter({ onFilterChange, proData = [] }) { 
+function Filter({ onFilterChange, proData = [] }) {
   const [openSections, setOpenSections] = useState({
     cat: false,
     price: false,
@@ -10,10 +10,10 @@ function Filter({ onFilterChange, proData = [] }) {
     color: false,
   });
 
-
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
-
+  const [filteredColors, setFilteredColors] = useState({});
+  const [priceRange, setPriceRange] = useState([0, 5000]);
 
   const toggleSection = useCallback((section) => {
     if (section === 'cat') {
@@ -32,24 +32,37 @@ function Filter({ onFilterChange, proData = [] }) {
   }, []);
 
   const handleBrandChange = (brand) => {
-
     setSelectedBrand(brand);
-
     onFilterChange('brand', brand);
   };
 
   const handleColorChange = (color) => {
-
     setSelectedColor(color);
-
     onFilterChange('color', color);
   };
 
-  // Check if proData is not undefined and has length
-  const brandCounts = proData.reduce((counts, product) => {
-    counts[product.brand] = (counts[product.brand] || 0) + 1;
-    return counts;
-  }, {});
+  const handlePriceChange = (min, max) => {
+    setPriceRange([min, max]);
+    onFilterChange('price', [min, max]);
+  };
+
+  const updateFilteredColors = useCallback((brand) => {
+    const colorCounts = proData
+      .filter((product) =>
+        product.price >= priceRange[0] &&
+        product.price <= priceRange[1] &&
+        (brand === null || product.brand === brand)
+      )
+      .reduce((counts, product) => {
+        counts[product.color] = (counts[product.color] || 0) + 1;
+        return counts;
+      }, {});
+    setFilteredColors(colorCounts);
+  }, [proData, priceRange]);
+
+  useEffect(() => {
+    updateFilteredColors(selectedBrand);
+  }, [selectedBrand, priceRange, updateFilteredColors]);
 
   return (
     <div className='procatdir'>
@@ -73,12 +86,31 @@ function Filter({ onFilterChange, proData = [] }) {
               <span className='catitle'>Filter by Price</span> < SlArrowDown />
             </div>
             {openSections.price && (
-              <input
-                type="range"
-                min="0"
-                max="5000"
-                onChange={(e) => onFilterChange('price', e.target.value)}
-              />
+              <div className="price-filter">
+                <input
+                  type="range"
+                  min="0"
+                  max="5000"
+                  step="1"
+                  value={priceRange[0]}
+                  onChange={(e) => handlePriceChange(+e.target.value, priceRange[1])}
+                  style={{ width: '100%' }}
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="5000"
+                  step="1"
+                  value={priceRange[1]}
+                  onChange={(e) => handlePriceChange(priceRange[0], +e.target.value)}
+                  style={{ width: '100%' }}
+                />
+                <div className="price-range-labels">
+                  <span>Price: ${priceRange[0]}</span>
+                  <span> - </span>
+                  <span>${priceRange[1]}</span>
+                </div>
+              </div>
             )}
           </div>
           <div className="filter-section">
@@ -95,8 +127,7 @@ function Filter({ onFilterChange, proData = [] }) {
                 {['Apple', 'Boat', 'Dell', 'Hp', 'Samsung', 'LG', 'Canon', 'Asus', 'Xiaomi', 'Fossil'].map((brand) => (
                   <div className='optionFcard' key={brand}>
                     <input
-
-                      type="radio"
+                      type="checkbox"
                       id={brand}
                       name="brand"
                       value={brand}
@@ -104,45 +135,45 @@ function Filter({ onFilterChange, proData = [] }) {
                       onChange={() => handleBrandChange(brand)}
                     />
                     <label htmlFor={brand}>
-                      {brand} <span>({brandCounts[brand] || 0})</span>
+                      {brand} <span>({proData.filter(product => product.brand === brand).length})</span>
                     </label>
-
                   </div>
                 ))}
               </div>
             )}
           </div>
-          <div className="filter-section">
-            <div className='pdown'
-              onClick={() => toggleSection('color')}
-              aria-controls="color-filter"
-              role="button"
-              tabIndex={0}
-            >
-              <span className='catitle'>Filter by Color</span> < SlArrowDown />
+          {selectedBrand && (
+            <div className="filter-section">
+              <div className='pdown'
+                onClick={() => toggleSection('color')}
+                aria-controls="color-filter"
+                role="button"
+                tabIndex={0}
+              >
+                <span className='catitle'>Filter by Color</span> < SlArrowDown />
+              </div>
+              {openSections.color && (
+                <div className='selectF'>
+                  {['Red', 'Black', 'Blue', 'Yellow', 'Green', 'Orange'].map((color) => (
+                    <div className='optionFcard' key={color}>
+                      <input
+                        type="radio"
+                        id={color}
+                        name="color"
+                        value={color}
+                        checked={selectedColor === color}
+                        onChange={() => handleColorChange(color)}
+                        className={`color-box ${color.toLowerCase()}`}
+                      />
+                      <label htmlFor={color}>
+                        <span>{color}</span><span>({filteredColors[color] || 0})</span>
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-            {openSections.color && (
-              <div className='selectF'>
-                {['Red', 'Black', 'Blue', 'Yellow', 'Green', 'Orange'].map((color) => (
-                  <div className='optionFcard' key={color}>
-                    <input
-                      type="radio"
-                      id={color}
-                      name="color"
-                      value={color}
-                      checked={selectedColor === color}
-                      onChange={() => handleColorChange(color)}
-                      className={`color-checkbox ${color.toLowerCase()}`}
-                    />
-                    <label htmlFor={color}>
-                      <div className={`color-box ${color.toLowerCase()}`}></div>
-                      <span>{color}</span>
-                    </label>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          )}
         </div>
       )}
     </div>
@@ -150,3 +181,4 @@ function Filter({ onFilterChange, proData = [] }) {
 }
 
 export default Filter;
+

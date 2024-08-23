@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../styles/Address.css";
 import ProccedPlace2 from './ProccedPlace2';
@@ -7,9 +7,67 @@ import { IoIosArrowDown } from "react-icons/io";
 
 export default function Address() {
   const navigate = useNavigate();
+  const [addresses, setAddresses] = useState([
+    { id: 1, name: "Kristin Watson", address: "4140 Parker Rd. Allentown, New Mexico 31134" },
+    { id: 2, name: "Annette Black", address: "4140 Parker Rd. Allentown, New Mexico 31134" },
+  ]);
+  const [selectedAddress, setSelectedAddress] = useState(null);
+  const [newAddress, setNewAddress] = useState({
+    name: '',
+    mobile: '',
+    flat: '',
+    area: '',
+    city: '',
+    pin: '',
+    state: '',
+    default: false,
+  });
+  const [editingId, setEditingId] = useState(null);
 
   const handleDeliverHere = () => {
     navigate('/payment-method'); // 'payment-method' sayfasına yönlendir
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewAddress(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+  
+  // Update the address to set selectedAddress state
+  // const handleSelectAddress = (id) => {
+  //   setSelectedAddress(id);
+  // };
+  
+  const handleAddNewAddress = () => {
+    if (editingId) {
+      setAddresses(addresses.map(addr => addr.id === editingId ? { ...newAddress, id: editingId } : addr));
+      setEditingId(null);
+    } else {
+      setAddresses([...addresses, { ...newAddress, id: addresses.length + 1 }]);
+    }
+    setNewAddress({
+      name: '',
+      mobile: '',
+      flat: '',
+      area: '',
+      city: '',
+      pin: '',
+      state: '',
+      default: false,
+    });
+  };
+
+  const handleEditAddress = (id) => {
+    const address = addresses.find(addr => addr.id === id);
+    setNewAddress(address);
+    setEditingId(id);
+  };
+
+  const handleDeleteAddress = (id) => {
+    setAddresses(addresses.filter(addr => addr.id !== id));
   };
 
   return (
@@ -35,70 +93,125 @@ export default function Address() {
               <p>Is the address you'd like to use displayed below? If so, click the corresponding "Deliver to this address" button. Or you can enter a new delivery address.</p>
             </div>
             <div className='adrcards'>
-              <div className='adrcard'>
-                <div className='adrcardtitleinputcheck'>
-                  <p>Kristin Watson</p>
-                  <input type="checkbox" className="addres" name="addres" value="Kristin" />
+              {addresses.map(addr => (
+                <div key={addr.id} className='adrcard'>
+                  <div className='adrcardtitleinputcheck'>
+                    <p>{addr.name}</p>
+                    <input
+                      type="checkbox"
+                      className="addres"
+                      name="addres"
+                      checked={selectedAddress === addr.id}
+                      onChange={() => setSelectedAddress(addr.id)}
+                    />
+                  </div>
+                  <p>{addr.address}</p>
+                  <div className='adddeledbtn'>
+                    <button onClick={() => handleEditAddress(addr.id)}>
+                      <img src="\images\edit-rectangle.png" alt="Edit" /> Edit
+                    </button>
+                    <button onClick={() => handleDeleteAddress(addr.id)}>
+                      <img src="\images\trash.svg" alt="Delete" /> Delete
+                    </button>
+                  </div>
                 </div>
-                <p>4140 Parker Rd. Allentown, New Mexico 31134</p>
-                <div className='adddeledbtn'>
-                  <button><img src="\images\edit-rectangle.png" alt="" /> Edit</button>
-                  <button><img src="\images\trash.svg" alt="" /> Delete</button>
-                </div>
-              </div>
-              <div className='adrcard'>
-                <div className='adrcardtitleinputcheck'>
-                  <p>Annette Black</p>
-                  <input type="checkbox" className="addres" name="addres" value="Annete" />
-                </div>
-                <p>4140 Parker Rd. Allentown, New Mexico 31134</p>
-                <div className='adddeledbtn'>
-                  <button><img src="\images\edit-rectangle.png" alt="" />Edit</button>
-                  <button><img src="\images\trash.svg" alt="" />Delete</button>
-                </div>
-              </div>
+              ))}
             </div>
             <button className='deliverHere' onClick={handleDeliverHere}>Deliver Here</button>
             <div className='newAddress'>
-              <p>Add a new address</p>
+              <p>{editingId ? 'Edit Address' : 'Add a new address'}</p>
               <div className='adrform'>
                 <div>
                   <label htmlFor='name'>Name</label>
-                  <input type="text" name="name" id="name" placeholder='Enter Name' />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder='Enter Name'
+                    value={newAddress.name}
+                    onChange={handleInputChange}
+                  />
                 </div>
+                {/* Diğer input alanları için handleInputChange ile bağlanmış kodları ekleyin */}
                 <div>
                   <label htmlFor='num'>Mobile Number</label>
-                  <input type="tel" name="num" id="num" placeholder='Enter Mobile Number' />
+                  <input
+                    type="tel"
+                    name="num"
+                    id="num"
+                    placeholder='Enter Mobile Number'
+                    value={newAddress.mobile}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div>
                   <label htmlFor='flat'>Flat, House no., Building, Company, Apartment</label>
-                  <input type="text" name="flat" id="flat" />
+                  <input
+                    type="text"
+                    name="flat"
+                    id="flat"
+                    value={newAddress.flat}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div>
                   <label htmlFor='area'>Area, Colony, Street, Sector, Village</label>
-                  <input type="text" name="area" id="area" />
+                  <input
+                    type="text"
+                    name="area"
+                    id="area"
+                    value={newAddress.area}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div>
                   <label>City</label>
-                  <select>
-                    <option>Select City</option>
+                  <select
+                    name="city"
+                    value={newAddress.city}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Select City</option>
+                    {/* Şehir seçeneklerini buraya ekleyin */}
                   </select><IoIosArrowDown className='adrselicon' />
                 </div>
                 <div>
                   <label htmlFor='pin'>Pin Code</label>
-                  <input type="text" name="pin" id="pin" placeholder='Enter Pin Code' />
+                  <input
+                    type="text"
+                    name="pin"
+                    id="pin"
+                    placeholder='Enter Pin Code'
+                    value={newAddress.pin}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div>
                   <label>State</label>
-                  <select>
-                    <option>Select State</option>
+                  <select
+                    name="state"
+                    value={newAddress.state}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Select State</option>
+                    {/* State seçeneklerini buraya ekleyin */}
                   </select><IoIosArrowDown className='adrselicon' />
                 </div>
                 <div>
-                  <input type="checkbox" name="" id="" />
+                  <input
+                    type="checkbox"
+                    name="default"
+                    checked={newAddress.default}
+                    onChange={(e) => setNewAddress(prevState => ({
+                      ...prevState,
+                      default: e.target.checked
+                    }))}
+                  />
                   <label htmlFor=''>Use as my default address</label>
                 </div>
-                <button>Add New Address</button>
+                <button onClick={handleAddNewAddress}>
+                  {editingId ? 'Update Address' : 'Add New Address'}
+                </button>
               </div>
             </div>
           </div>
@@ -108,3 +221,4 @@ export default function Address() {
     </div>
   );
 }
+

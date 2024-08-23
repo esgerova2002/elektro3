@@ -14,13 +14,8 @@ export default function Checkout() {
     }
   };
 
-  // Sepetteki tüm ürünlerin toplam tutarını hesapla
   const subtotal = cartItems.reduce((total, product) => total + (product.price * product.quantity), 0);
-
-  // Teslimat ücreti (sabit 1 dolar)
-  const deliveryCharge = 1.00;
-
-  // Genel toplam (subtotal + deliveryCharge)
+  const deliveryCharge = 1.00; // Static delivery charge
   const grandTotal = subtotal + deliveryCharge;
 
   return (
@@ -66,7 +61,11 @@ export default function Checkout() {
               </div>
             ))}
           </div>
-          <ProccedPlace subtotal={subtotal} deliveryCharge={deliveryCharge} grandTotal={grandTotal} />
+          <ProccedPlace 
+            subtotal={subtotal} 
+            deliveryCharge={deliveryCharge} 
+            grandTotal={grandTotal} 
+          />
         </div>
       </div>
     </div>

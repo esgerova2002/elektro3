@@ -6,12 +6,14 @@ import HomeS6 from '../components/HomeS6';
 import { SlArrowDown } from "react-icons/sl";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-
 function ProductPage() {
   const [proData, setProData] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-
-  const [filters, setFilters] = useState({ price: 5000, brand: '', color: [] });
+  const [filters, setFilters] = useState({
+    brand: null,
+    color: null,
+    price: [0, 5000]
+  });
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 15;
 
@@ -25,32 +27,24 @@ function ProductPage() {
   }, []);
 
   useEffect(() => {
-    let updatedProducts = proData.filter(product =>
-
-      product.price <= filters.price &&
-      (filters.brand === '' || product.brand === filters.brand) &&
-      (filters.color.length === 0 || filters.color.includes(product.color))
+    const updatedProducts = proData.filter(product =>
+      product.price >= filters.price[0] &&
+      product.price <= filters.price[1] &&
+      (filters.brand === null || product.brand === filters.brand) &&
+      (filters.color === null || product.color === filters.color)
     );
     setFilteredProducts(updatedProducts);
-
   }, [filters, proData]);
 
-
-  const onFilterChange = (filterName, filterValue) => {
-    if (filterName === 'color') {
-      let colors = filters.color.includes(filterValue)
-        ? filters.color.filter(color => color !== filterValue)
-        : [...filters.color, filterValue];
-      setFilters({ ...filters, color: colors });
-    } else {
-      setFilters({ ...filters, [filterName]: filterValue });
-    }
-    setCurrentPage(1);
+  const handleFilterChange = (filterType, value) => {
+    setFilters(prevFilters => ({
+      ...prevFilters,
+      [filterType]: value
+    }));
   };
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -73,7 +67,7 @@ function ProductPage() {
         <span>Shop</span><img src='./images/apro.svg' alt=''></img><span>All Products</span>
       </div>
       <div className='filterproductList'>
-      <Filter onFilterChange={onFilterChange} proData={proData} />
+        <Filter onFilterChange={handleFilterChange} proData={proData} />
         <div className='proListtop'>
           <div className='listop'>
             <div className='listop-img-img-span'>
@@ -87,7 +81,7 @@ function ProductPage() {
             </div>
           </div>
           <div className="product-list">
-            {currentProducts.map(product => (
+            {filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct).map(product => (
               <Link to={`/product/${product.id}`} key={product.id} className="product-item-link">
                 <div className="product-item">
                   <img className='pro-item-img' src={product.imgSrc} alt={product.name} />
@@ -132,3 +126,4 @@ function ProductPage() {
 }
 
 export default ProductPage;
+

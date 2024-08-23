@@ -36,12 +36,20 @@
   flex-direction: column;
   gap: 16px;
 }
+input[type="radio"] {
+  appearance: none; 
+}
 
 .optionFcard {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+}
+.optionFcard input{
+  width: 24px;
+height: 24px;
+border: 1px solid rgba(97, 97, 97, 0.2);
 }
 
 .optionFcard label {

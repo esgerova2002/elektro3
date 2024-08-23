@@ -8,3 +8,8 @@ font-size: 40px;
 font-weight: 700;
 line-height: 56px; 
 }
+@media (max-width: 768px) {
+    .relPro{
+        margin-bottom: 100px;
+    }
+  }

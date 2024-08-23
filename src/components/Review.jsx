@@ -1,27 +1,30 @@
 import React, { useEffect, useState } from 'react';
+import { useCart } from './CartContext'; // useCart import edildi
 import "../styles/Review.css";
 import "../styles/Address.css";
 import ProccedPlace3 from './ProccedPlace3';
 import "../styles/ProccedPlace.css";
-import Orderconf from './Orderconf';  // Orderconf bileşenini ekledik
+import Orderconf from './Orderconf';
 
 export default function Review() {
-  const [products, setProducts] = useState([]);
-  const [orderConfirmed, setOrderConfirmed] = useState(false); // Yeni durum eklendi
+  const { cartItems } = useCart(); // cartItems buradan çekiliyor
+  const [orderConfirmed, setOrderConfirmed] = useState(false);
 
   useEffect(() => {
-    fetch('/data/proData.json')
-      .then(response => response.json())
-      .then(data => setProducts(data))
-      .catch(error => console.error('Error fetching the products:', error));
-  }, []);
+    // Örneğin bir API çağrısı veya başka bir yan etki burada gerçekleşebilir
+    console.log('Review component mounted or cartItems updated');
+  }, [cartItems]); // `cartItems` değiştiğinde tetiklenir
+
+  const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  const deliveryCharge = 1.00; // Sabit bir değer
+  const grandTotal = subtotal + deliveryCharge;
 
   return (
-    <div className={`container ${orderConfirmed ? 'blur-background' : ''}`}> {/* Arka plan bulanıklığı */}
+    <div className={`container ${orderConfirmed ? 'blur-background' : ''}`}>
       <div className='address'>
         <p className='addresstitle'>Review Your Order</p>
         <div className='addleftleftright'>
-        <div className='rewleft'>
+          <div className='rewleft'>
             <div className='rewleftpag'>
               <div><img src="\images\home 03.png" alt="" /></div>
               <div></div>
@@ -38,7 +41,7 @@ export default function Review() {
               <p>Estimated delivery: 08 September 2023</p>
             </div>
             <div className='revcards'>
-              {products.map((product, index) => (
+              {cartItems.map((product, index) => (
                 <div key={index} className='revcard'>
                   <img src={product.imgSrc} alt={product.name} />
                   <div className='revtitlepricecount'>
@@ -71,11 +74,15 @@ export default function Review() {
               </div>
             </div>
           </div>
-          <ProccedPlace3 setOrderConfirmed={setOrderConfirmed} /> {/* setOrderConfirmed'i geçiyoruz */}
+          <ProccedPlace3 
+            subtotal={subtotal} 
+            deliveryCharge={deliveryCharge} 
+            grandTotal={grandTotal} 
+            setOrderConfirmed={setOrderConfirmed} 
+          />
         </div>
       </div>
       {orderConfirmed && <Orderconf setOrderConfirmed={setOrderConfirmed} />}
-
     </div>
   );
 }

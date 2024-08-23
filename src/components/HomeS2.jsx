@@ -11,18 +11,18 @@ export default function HomeS2() {
                 <div className='desc-right-top'><span>50% OFF</span></div>
                 <p>Mackbook Air M2</p>
                 <p>Don’t miss the last opportunity </p>
-                <button className="hero-button">Shop Now <img src="./images/arrow-fff.png" alt="" /></button>
+                <button className="hero-button">Shop Now <img src="/images/arrow-fff.png" alt="" /></button>
             </div>
-            <div className='s2-card-image'><img src="./images/image 15.png" alt="" /></div>
+            <div className='s2-card-image'><img src="/images/image 15.png" alt="" /></div>
           </div>
           <div className='s2-card'>
             <div className='s2-card-desc'>
                 <div className='desc-right-top'><span>50% OFF</span></div>
                 <p>Iphone 14 Pro</p>
                 <p>Don’t miss the last opportunity  </p>
-                <button className="hero-button">Shop Now <img src="./images/arrow-fff.png" alt="" /></button>
+                <button className="hero-button">Shop Now <img src="/images/arrow-fff.png" alt="" /></button>
             </div>
-            <div className='s2-card-image'><img src="./images/image 16.png" alt="" /></div>
+            <div className='s2-card-image'><img src="/images/image 16.png" alt="" /></div>
           </div>
         </div>
       </div>

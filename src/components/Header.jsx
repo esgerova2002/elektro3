@@ -1,20 +1,70 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaRegHeart } from 'react-icons/fa';
 import { SlArrowDown } from 'react-icons/sl';
 import { BsCart2 } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
-import { useCart } from './CartContext'; // Import the context
-import Minicart from './Minicart'; // Import the Minicart component
+import { useCart } from './CartContext';
+import Minicart from './Minicart';
 import "../styles/Header.css";
 
 const Header = ({ onLoginClick }) => {
-  const { cartItems } = useCart(); // Get cartItems from the context
-  const [isMinicartOpen, setIsMinicartOpen] = useState(false); // State to manage Minicart visibility
+  const { cartItems } = useCart();
+  const [isMinicartOpen, setIsMinicartOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [products, setProducts] = useState([]); // Ürün verileri için state
+  const [showResults, setShowResults] = useState(false); // Arama sonuçlarının görünürlüğü için state
+
+  useEffect(() => {
+    // JSON dosyasını fetch ile yükleme
+    fetch('/data/proData.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setProducts(data); // Ürünleri state'e yerleştir
+      })
+      .catch(error => {
+        console.error('Error loading JSON:', error);
+      });
+  }, []);
 
   const handleCartClick = () => {
     setIsMinicartOpen(!isMinicartOpen);
   };
+
+  const handleSearchChange = (e) => {
+    const term = e.target.value;
+    setSearchTerm(term);
+
+    if (term) {
+      const results = products.filter(product =>
+        product.name.toLowerCase().includes(term.toLowerCase())
+      );
+      setFilteredProducts(results);
+      setShowResults(true); // Arama yapıldığında sonuçları göster
+    } else {
+      setFilteredProducts([]);
+      setShowResults(false); // Arama terimi boşsa sonuçları gizle
+    }
+  };
+
+  const handleClickOutside = (e) => {
+    if (!e.target.closest('.search-wrapper')) {
+      setShowResults(false); // Sayfanın herhangi bir yerine tıklanırsa sonuçları gizle
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="container">
@@ -38,6 +88,8 @@ const Header = ({ onLoginClick }) => {
               id="search"
               name="search"
               placeholder="Search"
+              value={searchTerm}
+              onChange={handleSearchChange}
             />
             <button>Search</button>
           </div>
@@ -89,12 +141,21 @@ const Header = ({ onLoginClick }) => {
           <Minicart />
         </>
       )}
+      {showResults && filteredProducts.length > 0 && (
+        <div className="search-results">
+          {filteredProducts.map(product => (
+            <Link to={`/product/${product.id}`} key={product.id} className="search-result-item">
+              <img src={product.imgSrc} alt={product.name} />
+              <div>
+                <h4>{product.name}</h4>
+                <p>${product.price}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 };
 
 export default Header;
-
-
-
-

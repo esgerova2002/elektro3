@@ -1,4 +1,5 @@
 
+// ProccedPlace3.js
 import React from 'react';
 import "../styles/ProccedPlace.css";
 
@@ -32,5 +33,3 @@ export default function ProccedPlace3({ subtotal = 0, deliveryCharge = 0, grandT
     </div>
   );
 }
-
-
