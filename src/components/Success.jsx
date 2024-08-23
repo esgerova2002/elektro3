@@ -16,7 +16,7 @@ export default function Success({ onClose }) {
      <div className='circle'>
         <div className='circle1'>
             <div className='circle2'>
-                <div className='circle3'><img src='./images/search 4.png' alt='Success'></img></div>
+                <div className='circle3'><img src='/images/search 4.png' alt='Success'></img></div>
             </div>
         </div>
       </div>
