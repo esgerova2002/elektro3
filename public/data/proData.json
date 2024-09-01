@@ -41,7 +41,8 @@
       "profil1":"/images/Ellipse 956 (1).png",
       "profil2":"/images/Ellipse 957.png",
       "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "new" 
     },
     {
       "id": 3,
@@ -63,7 +64,8 @@
       "profil1":"/images/Ellipse 956 (1).png",
       "profil2":"/images/Ellipse 957.png",
       "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "new" 
     },
     {
         "id": 4,
@@ -85,7 +87,8 @@
         "profil1":"/images/Ellipse 956 (1).png",
         "profil2":"/images/Ellipse 957.png",
         "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "new"
       },
       {
         "id": 5,
@@ -107,7 +110,8 @@
         "profil1":"/images/Ellipse 956 (1).png",
         "profil2":"/images/Ellipse 957.png",
         "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "new"
       },
       {
         "id": 6,
@@ -129,7 +133,8 @@
         "profil1":"/images/Ellipse 956 (1).png",
         "profil2":"/images/Ellipse 957.png",
         "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "new"
       },
       {
         "id": 7,
@@ -151,7 +156,8 @@
         "profil1":"/images/Ellipse 956 (1).png",
         "profil2":"/images/Ellipse 957.png",
         "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "new" 
       },
       {
         "id": 8,
@@ -173,7 +179,8 @@
         "profil1":"/images/Ellipse 956 (1).png",
         "profil2":"/images/Ellipse 957.png",
         "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "new" 
       },
       {
         "id": 9,
@@ -195,7 +202,8 @@
         "profil1":"/images/Ellipse 956 (1).png",
         "profil2":"/images/Ellipse 957.png",
         "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "new"
       },
       {
         "id": 10,
@@ -217,7 +225,8 @@
         "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
         "profil2":"/images/round_profil_picture_after_.webp",
           "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "new" 
       },
       {
         "id": 11,
@@ -239,7 +248,8 @@
         "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
         "profil2":"/images/round_profil_picture_after_.webp",
           "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "new"
       },
       {
         "id": 12,
@@ -261,7 +271,8 @@
         "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
         "profil2":"/images/round_profil_picture_after_.webp",
           "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "new" 
       },
       {
         "id": 13,
@@ -283,7 +294,8 @@
         "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
         "profil2":"/images/round_profil_picture_after_.webp",
           "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "new" 
       },
       {
         "id": 14,
@@ -921,7 +933,8 @@
         "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
         "profil2":"/images/round_profil_picture_after_.webp",
           "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "featured"
       },
       {
         "id": 43,
@@ -943,7 +956,8 @@
         "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
         "profil2":"/images/round_profil_picture_after_.webp",
           "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "featured"
       },
       {
         "id": 44,
@@ -965,7 +979,8 @@
         "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
         "profil2":"/images/round_profil_picture_after_.webp",
           "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "featured"
       },
       {
         "id": 45,
@@ -987,7 +1002,8 @@
         "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
         "profil2":"/images/round_profil_picture_after_.webp",
           "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "featured"
       },
       {
         "id": 46,
@@ -1009,7 +1025,8 @@
         "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
         "profil2":"/images/round_profil_picture_after_.webp",
           "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "featured"
       },
       {
           "id": 47,
@@ -1053,7 +1070,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "featured"
         },
         {
           "id": 49,
@@ -1119,7 +1137,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "topRated"
         },
         {
           "id": 52,
@@ -1141,7 +1160,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "topRated"
         },
         {
           "id": 53,
@@ -1163,7 +1183,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "topRated"
         },
         {
           "id": 54,
@@ -1185,7 +1206,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "topRated"
         },
         {
           "id": 55,
@@ -1207,7 +1229,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "topRated"
         },
         {
           "id": 56,
@@ -1229,7 +1252,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category3": "topRated"
         },
         {
           "id": 57,
@@ -1251,7 +1275,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "topRated"
         },
         {
           "id": 58,
@@ -1273,7 +1298,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "topRated"
         },
         {
           "id": 59,
@@ -1339,7 +1365,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "topRated"
         },
         {
           "id": 62,
@@ -1383,7 +1410,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "topRated"
         },
         {
           "id": 64,
@@ -1405,7 +1433,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+       "category2": "featured"
         },
         {
           "id": 65,
@@ -1427,7 +1456,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+       "category2": "featured"
         },
         {
           "id": 66,
@@ -1449,7 +1479,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "topRated"
         },
         {
           "id": 67,
@@ -1471,7 +1502,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+       "category2": "featured"
         },
         {
           "id": 68,
@@ -1515,7 +1547,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+      "category2": "topRated"
         },
         {
           "id": 70,
@@ -1537,7 +1570,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+       "category2": "featured"
         },
         {
           "id": 71,
@@ -1581,7 +1615,8 @@
           "profil1":"/images/404-4042710_circle-profile-picture-png-transparent-png.png",
           "profil2":"/images/round_profil_picture_after_.webp",
             "profil1name":"Mark Williams",
-      "profil2name":"Alexa Johnson"
+      "profil2name":"Alexa Johnson",
+       "category2": "featured"
         },
         {
           "id": 73,
@@ -1647,7 +1682,9 @@
            "profil1":"/images/Ellipse 956 (1).png",
            "profil2":"/images/Ellipse 957.png",
            "profil1name":"Mark Williams",
-           "profil2name":"Alexa Johnson"
+           "profil2name":"Alexa Johnson",
+            "category2": "featured"
         }
+        
   ]
   

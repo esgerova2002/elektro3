@@ -21,6 +21,7 @@ height: 160.446px;
 .hcircle img{
     width: 499px;
 height: 814px;
+object-fit: contain;
 }
 .circleh{
     position: absolute;
@@ -137,7 +138,7 @@ height: 814px;
        display: none;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 510px) {
     .hucbucaq{
         display: none;
     }
@@ -155,6 +156,19 @@ height: 814px;
     }
     .yaricircle{
         display: none;
+    }
+    .hero-title {
+        text-align: start;
+        width: 244px;
+        color: #101316;
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    .hero-subtitle{
+        margin-left: 30px;
+    }
+    .hero-button{
+        margin-left: 30px;
     }
   }
   @media (max-width: 380px) {

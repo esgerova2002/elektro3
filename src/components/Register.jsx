@@ -27,7 +27,7 @@ export default function Register({ onClose, onRegisterSuccess }) {
           <h3 className="welcome">Create New Account</h3>
           <p className="here">Please enter details</p>
           <form onSubmit={(e) => e.preventDefault()}>
-            <div className="Form-Group">
+            <div className="Form-Groupr">
               <label htmlFor="name">Name</label>
               <input
                 type="text"
@@ -36,7 +36,7 @@ export default function Register({ onClose, onRegisterSuccess }) {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-            <div className="Form-Group">
+            <div className="Form-Groupr">
               <label htmlFor="email">Email Address</label>
               <input
                 type="email"
@@ -45,7 +45,7 @@ export default function Register({ onClose, onRegisterSuccess }) {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="Form-Group">
+            <div className="Form-Groupr">
               <label htmlFor="password">Password</label>
               <input
                 type="password"

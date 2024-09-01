@@ -1,14 +1,13 @@
 import React from 'react';
-import { useCart } from './CartContext'; // Import the context
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import { useCart } from './CartContext'; 
+import { useNavigate } from 'react-router-dom'; 
 import "../styles/Minicart.css";
 
 
 export default function Minicart() {
-  const { cartItems, removeFromCart } = useCart(); // Get cartItems and removeFromCart function from the context
-  const navigate = useNavigate(); // Initialize useNavigate
+  const { cartItems, removeFromCart } = useCart();
+  const navigate = useNavigate(); 
 
-  // Toplam ürün sayısını hesapla
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
@@ -37,7 +36,7 @@ export default function Minicart() {
         <button className='minivc'>View Cart</button>
         <button 
           className='minicheck' 
-          onClick={() => navigate('/checkout')} // Navigate to Checkout page
+          onClick={() => navigate('/checkout')}
         >
           Checkout
         </button>

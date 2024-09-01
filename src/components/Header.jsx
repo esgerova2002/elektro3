@@ -13,11 +13,10 @@ const Header = ({ onLoginClick }) => {
   const [isMinicartOpen, setIsMinicartOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [products, setProducts] = useState([]); // Ürün verileri için state
-  const [showResults, setShowResults] = useState(false); // Arama sonuçlarının görünürlüğü için state
+  const [products, setProducts] = useState([]); 
+  const [showResults, setShowResults] = useState(false); 
 
   useEffect(() => {
-    // JSON dosyasını fetch ile yükleme
     fetch('/data/proData.json')
       .then(response => {
         if (!response.ok) {
@@ -26,7 +25,7 @@ const Header = ({ onLoginClick }) => {
         return response.json();
       })
       .then(data => {
-        setProducts(data); // Ürünleri state'e yerleştir
+        setProducts(data); 
       })
       .catch(error => {
         console.error('Error loading JSON:', error);
@@ -38,24 +37,25 @@ const Header = ({ onLoginClick }) => {
   };
 
   const handleSearchChange = (e) => {
-    const term = e.target.value;
+    const term = e.target.value.toLowerCase(); 
     setSearchTerm(term);
 
     if (term) {
-      const results = products.filter(product =>
-        product.name.toLowerCase().includes(term.toLowerCase())
-      );
-      setFilteredProducts(results);
-      setShowResults(true); // Arama yapıldığında sonuçları göster
+        const results = products.filter(product =>
+            product.name.toLowerCase().includes(term) 
+        );
+        setFilteredProducts(results);
+        setShowResults(true); 
     } else {
-      setFilteredProducts([]);
-      setShowResults(false); // Arama terimi boşsa sonuçları gizle
+        setFilteredProducts([]);
+        setShowResults(false); 
     }
-  };
+};
+
 
   const handleClickOutside = (e) => {
     if (!e.target.closest('.search-wrapper')) {
-      setShowResults(false); // Sayfanın herhangi bir yerine tıklanırsa sonuçları gizle
+      setShowResults(false); 
     }
   };
 
@@ -123,7 +123,7 @@ const Header = ({ onLoginClick }) => {
             <li>
               <Link to="/shop">Shop</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/about">About Us</Link>
             </li>
             <li>
@@ -131,7 +131,7 @@ const Header = ({ onLoginClick }) => {
             </li>
             <li>
               <Link to="/contact">Contact Us</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>

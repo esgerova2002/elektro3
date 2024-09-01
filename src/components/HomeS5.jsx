@@ -1,43 +1,27 @@
 
+
 import React, { useState, useEffect } from 'react';
 import '../styles/HomeS3.css';
-
-const productData = {
-  new: [
-    { id: 1, imgSrc: './images/image 24.png', name: 'Panasonic Lumix DC-GH5 II', price: '$1500.00' },
-    { id: 2, imgSrc: './images/image 25.png', name: 'Asus ROG Delta S', price: '$250.00' },
-    { id: 3, imgSrc: './images/image 26.png', name: 'Xiaomi Fimi X8 Mini', price: '$650.00' },
-    { id: 4, imgSrc: './images/image 27.png', name: 'Apple iPhone 13', price: '$500.00' },
-    { id: 5, imgSrc: './images/image 28.png', name: 'Fossil Gen 6 Smart Watch', price: '$450.00' },
-    { id: 6, imgSrc: './images/image 29.png', name: 'Apple iPad Air Wi-Fi', price: '$850.00' },
-  ],
-  featured: [
-    { id: 7, imgSrc: './images/image 20.png', name: 'Apple iPad Pro Wi-Fi', price: '$800.00' },
-    { id: 8, imgSrc: './images/image 21.png', name: 'Apple iPad Air Wi-Fi', price: '$600.00' },
-    { id: 9, imgSrc: './images/image 22.png', name: 'Apple iPad Pro 2021', price: '$1000.00' },
-    { id: 10, imgSrc: './images/image 18.png', name: 'Apple iPad Mini 6 Wi-Fi', price: '$500.00' },
-    { id: 11, imgSrc: './images/image 22.png', name: 'Apple iPad Mini 6 Wi-Fi', price: '$500.00' },
-    { id: 12, imgSrc: './images/image 17.png', name: 'Apple iPad Mini 6 Wi-Fi', price: '$500.00' },
-  ],
-  topRated: [
-    { id: 13, imgSrc: './images/image 21.png', name: 'Apple iPad Air Wi-Fi', price: '$600.00' },
-    { id: 14, imgSrc: './images/image 19.png', name: 'Apple iPad Pro 2020', price: '$900.00' },
-    { id: 15, imgSrc: './images/image 20.png', name: 'Apple iPad Mini 5 Wi-Fi', price: '$400.00' },
-    { id: 16, imgSrc: './images/image 21.png', name: 'Apple iPad Air Wi-Fi', price: '$600.00' },
-    { id: 17, imgSrc: './images/image 22.png', name: 'Apple iPad Pro 2021', price: '$1000.00' },
-    { id: 18, imgSrc: './images/image 18.png', name: 'Apple iPad Mini 6 Wi-Fi', price: '$500.00' },
-  ],
-};
 
 export default function HomeS3() {
   const [currentCategory, setCurrentCategory] = useState('new');
   const [scrollPosition, setScrollPosition] = useState(0);
-  const currentProducts = productData[currentCategory];
+  const [products, setProducts] = useState([]);
 
-  const handleCategoryChange = (category) => {
+  useEffect(() => {
+    fetch('/data/proData.json')
+      .then(response => response.json())
+      .then(data => {
+        setProducts(data);
+      });
+  }, []);
+
+  const handleCategoryChange = (category3) => {
     setScrollPosition(window.scrollY);
-    setCurrentCategory(category);
+    setCurrentCategory(category3);
   };
+
+  const currentProducts = products.filter(product => product.category3 === currentCategory);
 
   useEffect(() => {
     window.scrollTo(0, scrollPosition);
@@ -65,7 +49,7 @@ export default function HomeS3() {
           </div>
           <div className='home-s3-pro'>
             {currentProducts.map(product => (
-              <div key={product.id} className='home-s3-pro-card'>
+              <a href={`/product/${product.id}`} key={product.id} className='home-s3-pro-card'>
                 <div className='home-s3-pro-card-img'>
                   <img src={product.imgSrc} alt={product.name} />
                 </div>
@@ -78,7 +62,7 @@ export default function HomeS3() {
                   <img src="./images/star.png" alt="star" />
                 </div>
                 <span>{product.price}</span>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -86,5 +70,3 @@ export default function HomeS3() {
     </div>
   );
 }
-
-

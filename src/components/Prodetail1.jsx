@@ -9,6 +9,25 @@ export default function Prodetail1() {
   const [selectedColor, setSelectedColor] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useCart(); 
+  
+  const handleAddToCart = () => {
+    if (!selectedColor) {
+      alert("Zəhmət olmasa bir rəng seçin.");
+      return;
+    }
+
+    const item = {
+      id: product.id,
+      name: product.name,
+      imgSrc: product.imgSrc,
+      price: product.price,
+      quantity: quantity,
+      color: selectedColor
+    };
+    addToCart(item);
+
+    alert(`${product.name} səbətə əlavə olundu!`);
+  };
 
   useEffect(() => {
     fetch('/data/proData.json')
@@ -25,17 +44,6 @@ export default function Prodetail1() {
 
   const handleQuantityChange = (amount) => {
     setQuantity(prevQuantity => Math.max(1, prevQuantity + amount));
-  };
-  const handleAddToCart = () => {
-    const item = {
-      id: product.id,
-      name: product.name,
-      imgSrc: product.imgSrc,
-      price: product.price,
-      quantity: quantity,
-      color: selectedColor
-    };
-    addToCart(item);
   };
 
   if (!product) {
@@ -121,3 +129,4 @@ export default function Prodetail1() {
     </div>
   );
 }
+
