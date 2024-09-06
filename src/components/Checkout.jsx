@@ -15,7 +15,7 @@ export default function Checkout() {
   };
 
   const subtotal = cartItems.reduce((total, product) => total + (product.price * product.quantity), 0);
-  const deliveryCharge = 1.00; // Static delivery charge
+  const deliveryCharge = 1.00; 
   const grandTotal = subtotal + deliveryCharge;
 
   return (

@@ -8,14 +8,14 @@ export default function Prodetail1() {
   const [product, setProduct] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const { addToCart } = useCart(); 
-  
+  const { addToCart } = useCart();
+
   const handleAddToCart = () => {
     if (!selectedColor) {
       alert("Zəhmət olmasa bir rəng seçin.");
       return;
     }
-
+  
     const item = {
       id: product.id,
       name: product.name,
@@ -24,9 +24,10 @@ export default function Prodetail1() {
       quantity: quantity,
       color: selectedColor
     };
+  
     addToCart(item);
-
-    alert(`${product.name} səbətə əlavə olundu!`);
+  
+    alert(`${product.name} (${selectedColor}) səbətə ${quantity} ədəd əlavə olundu!`);
   };
 
   useEffect(() => {
@@ -111,8 +112,7 @@ export default function Prodetail1() {
                 <div>{quantity}</div>
                 <div onClick={() => handleQuantityChange(1)}>+</div>
               </div>
-              
-               <button className='addprobtn' onClick={handleAddToCart}>Add to Cart</button>
+              <button className='addprobtn' onClick={handleAddToCart}>Add to Cart</button>
               <div className='detailheart'><img src="/images/heart.svg" alt="h" /></div>
             </div>
             <div className='share'>
@@ -129,4 +129,3 @@ export default function Prodetail1() {
     </div>
   );
 }
-

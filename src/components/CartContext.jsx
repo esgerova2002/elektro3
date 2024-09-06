@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
         )
       );
     } else {
-      setCartItems(prevItems => [...prevItems, { ...item, quantity: 1 }]);
+      setCartItems(prevItems => [...prevItems, item]);
     }
   };
 
@@ -30,11 +30,15 @@ export const CartProvider = ({ children }) => {
   };
 
   const updateQuantity = (id, newQuantity) => {
-    setCartItems(prevItems =>
-      prevItems.map(item =>
-        item.id === id ? { ...item, quantity: newQuantity } : item
-      )
-    );
+    if (newQuantity <= 0) {
+      removeFromCart(id); 
+    } else {
+      setCartItems(prevItems =>
+        prevItems.map(item =>
+          item.id === id ? { ...item, quantity: newQuantity } : item
+        )
+      );
+    }
   };
 
   return (
@@ -43,6 +47,7 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
+
 
 
 
