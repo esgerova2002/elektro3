@@ -18,10 +18,11 @@ import Checkout from "./components/Checkout";
 import Address from './components/Address';
 import PaymentMethod from "./components/PaymentMethod";
 import Review from './components/Review';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const [modalType, setModalType] = useState("");
-  const [isMinicartOpen, setIsMinicartOpen] = useState(false); // Minicart'ın açık olup olmadığını kontrol etmek için state
+  const [isMinicartOpen, setIsMinicartOpen] = useState(false); 
 
   const handleLoginClick = () => {
     setModalType("login");
@@ -52,7 +53,7 @@ function App() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (minicartRef.current && !minicartRef.current.contains(event.target)) {
-        setIsMinicartOpen(false); // Dışarıya tıklayınca minicart'ı kapat
+        setIsMinicartOpen(false); 
       }
     };
 
@@ -64,6 +65,7 @@ function App() {
 
   return (
     <CartProvider> {/* CartContext ile App'i sarmala */}
+    <Toaster />
       <Router>
         <Header onLoginClick={handleLoginClick} onCartClick={toggleMinicart} />
         <Routes>

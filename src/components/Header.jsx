@@ -7,8 +7,10 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { useCart } from './CartContext';
 import Minicart from './Minicart';
 import "../styles/Header.css";
+import { useNavigate } from 'react-router-dom'; 
 
 const Header = ({ onLoginClick }) => {
+  const navigate = useNavigate();
   const { cartItems } = useCart();
   const [isMinicartOpen, setIsMinicartOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -69,7 +71,7 @@ const Header = ({ onLoginClick }) => {
   return (
     <header className="container">
       <div className="headerTop">
-        <div className="logo">
+        <div className="logo" onClick={() => navigate('/')}>
           <img src="/images/Group 427319094.png" alt="Logo" />
         </div>
         <div className="allSearch">

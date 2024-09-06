@@ -59,6 +59,7 @@
   height: 200px;
   border-radius: 50%;
   background-color: rgba(165, 169, 172, 0.10);
+  cursor: pointer;
 }
 
 .s1-card-circle img {
@@ -74,5 +75,6 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 30px;
+  cursor: pointer;
 }
 

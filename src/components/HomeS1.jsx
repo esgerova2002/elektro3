@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import '../styles/HomeS1.css';
-
+import { useNavigate } from 'react-router-dom'; 
 const cardData = [
   { id: 1, imgSrc: '/images/image 9.png', name: 'Mobile Phones' },
   { id: 2, imgSrc: '/images/image 11.png', name: 'Smart TV' },
@@ -22,6 +22,7 @@ const cardData = [
 const itemsPerPage = 6;
 
 export default function HomeS1() {
+  const navigate = useNavigate(); 
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -57,10 +58,10 @@ export default function HomeS1() {
         <div className='s1-cards'>
           {currentItems.map(card => (
             <div key={card.id} className='s1-card'>
-              <div className='s1-card-circle'>
+              <div className='s1-card-circle' onClick={() => navigate('/shop')}>
                 <img src={card.imgSrc} alt={card.name} />
               </div>
-              <p className='s1-ename'>{card.name}</p>
+              <p className='s1-ename' onClick={() => navigate('/shop')}>{card.name}</p>
             </div>
           ))}
         </div>

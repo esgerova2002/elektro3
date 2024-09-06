@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useCart } from './CartContext';
+import { toast } from 'react-hot-toast';  
 import "../styles/Prodetail1.css";
 
 export default function Prodetail1() {
@@ -12,10 +13,10 @@ export default function Prodetail1() {
 
   const handleAddToCart = () => {
     if (!selectedColor) {
-      alert("Zəhmət olmasa bir rəng seçin.");
+      toast.error("Zəhmət olmasa bir rəng seçin.");
       return;
     }
-  
+
     const item = {
       id: product.id,
       name: product.name,
@@ -24,10 +25,10 @@ export default function Prodetail1() {
       quantity: quantity,
       color: selectedColor
     };
-  
+
     addToCart(item);
-  
-    alert(`${product.name} (${selectedColor}) səbətə ${quantity} ədəd əlavə olundu!`);
+
+    toast.success(`${product.name} (${selectedColor}) səbətə ${quantity} ədəd əlavə olundu!`);
   };
 
   useEffect(() => {
@@ -129,3 +130,4 @@ export default function Prodetail1() {
     </div>
   );
 }
+
