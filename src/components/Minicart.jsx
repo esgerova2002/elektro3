@@ -4,19 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import "../styles/Minicart.css";
 
 
-export default function Minicart({ onClose }) {
+export default function Minicart() {
   const { cartItems, removeFromCart } = useCart();
   const navigate = useNavigate(); 
 
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
-  const handleOutsideClick = (e) => {
-    if (e.target.className === 'minifixed' || e.target.className === 'minivc') {
-      onClose();
-    }
-  };
+
   return (
-    <div className='minifixed' onClick={handleOutsideClick}>
-     <div className='minicart'>
+    <div className='minicart'>
       <div className='minicartTop'>
         <p className='minicartbasliq'>You have <span className='addprodatacount'>{totalItems} items</span> in your cart</p>
         {cartItems.map((item, index) => (
@@ -38,7 +33,7 @@ export default function Minicart({ onClose }) {
           <p>Subtotal</p>
           <p>${cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}</p>
         </div>
-        <button className='minivc' onClick={onClose}>View Cart</button>
+        <button className='minivc'>View Cart</button>
         <button 
           className='minicheck' 
           onClick={() => navigate('/checkout')}
@@ -47,8 +42,5 @@ export default function Minicart({ onClose }) {
         </button>
       </div>
     </div>
-    </div>
-    
   );
 }
-
