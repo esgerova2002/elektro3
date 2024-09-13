@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useCart } from './CartContext'; // useCart import edildi
+import { useCart } from './CartContext'; 
 import "../styles/Review.css";
 import "../styles/Address.css";
 import ProccedPlace3 from './ProccedPlace3';
@@ -7,16 +7,15 @@ import "../styles/ProccedPlace.css";
 import Orderconf from './Orderconf';
 
 export default function Review() {
-  const { cartItems } = useCart(); // cartItems buradan çekiliyor
+  const { cartItems } = useCart(); 
   const [orderConfirmed, setOrderConfirmed] = useState(false);
 
   useEffect(() => {
-    // Örneğin bir API çağrısı veya başka bir yan etki burada gerçekleşebilir
     console.log('Review component mounted or cartItems updated');
-  }, [cartItems]); // `cartItems` değiştiğinde tetiklenir
+  }, [cartItems]); 
 
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-  const deliveryCharge = 1.00; // Sabit bir değer
+  const deliveryCharge = 1.00; 
   const grandTotal = subtotal + deliveryCharge;
 
   return (

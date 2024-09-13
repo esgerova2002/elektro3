@@ -3,7 +3,9 @@ import React from "react";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import "../styles/Footer.css";
+import { useNavigate } from 'react-router-dom'; 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <div className="footer">
       <div className="container">
@@ -13,6 +15,7 @@ export default function Footer() {
               src="/images/Group 427319094 (1).png"
               className="footlogo"
               alt="Logo"
+              onClick={() => navigate('/')}
             ></img>
             <div className="cailling">
               <img src="/images/calling.png" alt="call"></img>
